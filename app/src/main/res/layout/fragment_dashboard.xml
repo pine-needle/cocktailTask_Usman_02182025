@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/white">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingTop="20sp"
+        android:paddingBottom="20sp"
+        android:text="Random Cocktail..."
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <!-- Cocktail Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Cocktail Image -->
+            <ImageView
+                android:id="@+id/drinkImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Cocktail Image"/>
+
+            <!-- Cocktail Name -->
+            <TextView
+                android:id="@+id/drinkName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="8dp"/>
+
+            <!-- Cocktail Tag -->
+            <TextView
+                android:id="@+id/drinkTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink Tag"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"/>
+
+            <!-- Cocktail Category -->
+            <TextView
+                android:id="@+id/drinkCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink Category"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <!-- Cocktail Instructions -->
+            <TextView
+                android:id="@+id/drinkInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink Instructions"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:paddingTop="8dp"/>
+
+            <!-- Date Modified -->
+            <TextView
+                android:id="@+id/drinkDateModified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Modified"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:paddingTop="8dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to Refresh Cocktail Data -->
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get New Cocktail"
+        android:padding="10dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
