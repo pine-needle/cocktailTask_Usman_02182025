@@ -1,4 +1,4 @@
-package com.example.cocktailtaskapp.home.ui
+package com.example.cocktailtaskapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cocktailtaskapp.databinding.FragmentHomeBinding
-import com.example.cocktailtaskapp.home.vm.CocktailAdapter
-import com.example.cocktailtaskapp.home.vm.HomeViewModel
+import com.example.cocktailtaskapp.vm.CocktailAdapter
+import com.example.cocktailtaskapp.vm.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null

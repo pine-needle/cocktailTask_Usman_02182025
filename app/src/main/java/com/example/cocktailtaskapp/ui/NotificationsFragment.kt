@@ -1,4 +1,4 @@
-package com.example.cocktailtaskapp.notification.ui
+package com.example.cocktailtaskapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.cocktailtaskapp.databinding.FragmentNotificationsBinding
-import com.example.cocktailtaskapp.notification.vm.NotificationsViewModel
+import com.example.cocktailtaskapp.vm.NotificationsViewModel
 
 class NotificationsFragment : Fragment() {
 

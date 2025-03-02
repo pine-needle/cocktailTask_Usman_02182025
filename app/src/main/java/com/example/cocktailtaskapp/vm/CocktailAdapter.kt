@@ -1,4 +1,4 @@
-package com.example.cocktailtaskapp.home.vm
+package com.example.cocktailtaskapp.vm
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cocktailtaskapp.R
-import com.example.cocktailtaskapp.home.model.DrinkModel
+import com.example.cocktailtaskapp.data.model.DrinkModel
 
 class CocktailAdapter(
     private var cocktailList: List<DrinkModel?>

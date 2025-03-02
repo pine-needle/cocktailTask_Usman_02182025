@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -51,15 +53,20 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
+    //Hilt
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.material3.android)
+    ksp(libs.hilt.android.compiler)
+    //Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
     //Retrofit
     implementation(libs.retrofit)
-
     //Gson
     implementation(libs.converter.gson)
-
     //Glide
-        implementation(libs.glide)
+    implementation(libs.glide)
 
 
 }

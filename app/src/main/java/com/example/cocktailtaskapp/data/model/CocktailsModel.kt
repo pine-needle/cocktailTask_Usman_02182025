@@ -1,5 +1,4 @@
-package com.example.cocktailtaskapp.home.model
-
+package com.example.cocktailtaskapp.data.model
 
 import com.google.gson.annotations.SerializedName
 

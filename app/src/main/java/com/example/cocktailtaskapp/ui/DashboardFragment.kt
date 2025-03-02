@@ -1,4 +1,4 @@
-package com.example.cocktailtaskapp.dashboard.ui
+package com.example.cocktailtaskapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.cocktailtaskapp.databinding.FragmentDashboardBinding
-import com.example.cocktailtaskapp.dashboard.vm.DashboardViewModel
+import com.example.cocktailtaskapp.vm.DashboardViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
-
+@AndroidEntryPoint
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null

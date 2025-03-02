@@ -1,4 +1,4 @@
-package com.example.cocktailtaskapp.notification.vm
+package com.example.cocktailtaskapp.vm
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
