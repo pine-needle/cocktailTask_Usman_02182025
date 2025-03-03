@@ -1,6 +1,7 @@
 package com.example.cocktailtaskapp.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cocktailtaskapp.databinding.FragmentHomeBinding
+import com.example.cocktailtaskapp.utils.UiStatus
 import com.example.cocktailtaskapp.vm.CocktailAdapter
 import com.example.cocktailtaskapp.vm.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -44,7 +46,30 @@ class HomeFragment : Fragment() {
         }
 
         // Fetch Cocktail Data from API
-        homeViewModel.getCocktailData()
+         homeViewModel.getCocktailData()
+
+
+        // Fetch cocktails from Room Database
+        homeViewModel.getCocktailsFromDB()
+
+
+//        // Observe data from Room
+       homeViewModel.cocktailsFromDb.observe(viewLifecycleOwner) { status ->
+          when (status) {
+               is UiStatus.LOADING -> {
+                   // Show loading state
+              }
+               is UiStatus.SUCCESS -> {
+                   val cocktails = status.data
+                   // Update RecyclerView or UI with cocktails
+                    Log.e("Room Data", "$cocktails")
+               }
+                is UiStatus.ERROR -> {
+                   Log.e("RoomDB", "Error fetching from Room: ${status.message}")
+               }
+            }
+       }
+
 
         return root
     }

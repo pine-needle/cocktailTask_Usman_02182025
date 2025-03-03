@@ -20,7 +20,6 @@ class CocktailAdapter(
             itemView.findViewById<TextView>(R.id.cocktailTag).text = drink?.strDrink ?: "No Name"
             itemView.findViewById<TextView>(R.id.cocktailInstruction).text = drink?.strInstructions ?: "No Instructions"
             itemView.findViewById<TextView>(R.id.cocktailCategory).text = drink?.strCategory ?: "No Category"
-
             val imageView = itemView.findViewById<ImageView>(R.id.cocktailImage)
             Glide.with(itemView).load(drink?.strDrinkThumb).into(imageView)
             imageView.contentDescription = "Image of ${drink?.strTags ?: "Cocktail"}"
